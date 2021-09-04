@@ -32,7 +32,7 @@ namespace Geometria_Taxista.Models
             return Math.Abs(_column - endPoint._column);
         }
         /// <summary>
-        /// it compares both rows, and get the correct number.
+        /// it compares both rows and get the correct number.
         /// </summary>
         /// <param name="endPoint"></param>
         /// <returns> I use Math.Abs to return the absolute valor of the parameteres.</returns>

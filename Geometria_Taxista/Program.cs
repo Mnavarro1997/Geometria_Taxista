@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Geometria_Taxista.Models;
+using System;
 
 namespace Geometria_Taxista
 {
@@ -6,12 +7,14 @@ namespace Geometria_Taxista
     {
         static void Main(string[] args)
         {
-            int coord1;
-            int coord2;
-            Console.WriteLine("Write de first one");
-            coord1 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Write de second one");
-             coord2 = Convert.ToInt32(Console.ReadLine());
+            // I create the new parameter "d", to pass all the info.
+            DistanceService d = new DistanceService();
+            
+            // each point is throw to new points, and with the method of calculate create the result.
+            Console.WriteLine(d.CalculateDistance(new Point(1, 1), new Point(1, 1)));
+            Console.WriteLine(d.CalculateDistance(new Point(5, 4), new Point(3, 2)));
+            Console.WriteLine(d.CalculateDistance(new Point(1, 1), new Point(0, 3)));
+
         }
     }
 }
